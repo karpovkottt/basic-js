@@ -16,10 +16,11 @@ function getSumOfDigits(n) {
   let arr = String(n).split('');
   let sum = arr.reduce((acc, el) => Number(acc) + Number(el));
   if (sum > 9) {
-    getSumOfDigits(sum);
+    sum = getSumOfDigits(sum);
   } else {
     return sum;
   }
+  return sum
 }
 
 module.exports = {
